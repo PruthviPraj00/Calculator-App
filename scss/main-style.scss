@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Theme 1
+
+// Backgrounds
+
+$Vd-desaturated-blue-m: hsl(222, 26%, 31%);//(main background)
+$vd-desaturated-blue-tk : hsl(223, 31%, 20%);//(toggle background, keypad background)
+$vd-desaturated-blue-s: hsl(224, 36%, 15%); //(screen background)
+$d-dark-blue : hsl(225, 21%, 49%); //(key background)
+$Desaturated-dark-blue : hsl(224, 28%, 35%); //(key shadow)
+$Red : hsl(6, 63%, 50%);//(key background, toggle)
+$Dark-red : hsl(6, 70%, 34%);//(key shadow)
+$l-g-orange: hsl(30, 25%, 89%);// (key background)
+$g-orange : hsl(28, 16%, 65%);//(key shadow)
+$vd-grayish-blue: hsl(221, 14%, 31%);
+$White: hsl(0, 0%, 100%);
+
+// ----------------------------------------------------------------
+
+// Theme 2
+ $l-gray : hsl(0, 0%, 90%); //(main background)
+ $Grayish-red : hsl(0, 5%, 81%); //(toggle background, keypad background)
+ $Vl-gray : hsl(0, 0%, 93%); //(screen background)
+ $DM-cyan : hsl(185, 42%, 37%);//(key background)
+ $VD-cyan : hsl(185, 58%, 25%);//(key shadow)
+ $Orange : hsl(25, 98%, 40%);//(key background, toggle)
+ $Dark-orange: hsl(25, 99%, 27%);// (key shadow)
+ $l-g-yellow : hsl(45, 7%, 89%); //(key background)
+ $D-g-orange : hsl(35, 11%, 61%);// (key shadow)
+ $Vd-g-yellow: hsl(60, 10%, 19%);//text-color
+
+// ----------------------------------------------------------------
+
+// Theme 3
+
+
+$vd-violet-m : hsl(268, 75%, 9%);//(main background)
+$vd-violet-tb : hsl(268, 71%, 12%);//(toggle background, keypad background, screen background)
+$d-violet : hsl(281, 89%, 26%);//(key background)
+$V-magenta : hsl(285, 91%, 52%);//(key shadow)
+$p-cyan : hsl(176, 100%, 44%);//(key background, toggle)
+$s-cyan : hsl(177, 92%, 70%);//(key shadow)
+$vd-violet-key : hsl(268, 47%, 21%);//(key background)
+$d-magenta : hsl(290, 70%, 36%);//(key shadow)
+$l-yellow: hsl(52, 100%, 62%);//  Text
+$vd-blue: hsl(198, 20%, 13%);//  Text
+
+// ----------------------------------------------------------------
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+@mixin myFlex($justy, $align ){
+
+    display: flex;
+    justify-content: $justy;
+    align-items: $align;
+    
+}
+
+@mixin myborder-ra(){
+    border-radius: 12px;
+}
+
+
+@mixin mycolor($color, $bg-color){
+    color: $color;
+    background-color: $bg-color;
+}
+
+body#theme1{
+    background-color: $Vd-desaturated-blue-m;
+    color: $White;
+     
+     .themes{
+        .toggle{
+             background-color: $vd-desaturated-blue-tk;
+             div{
+            background-color: $Red;
+
+            }
+         }
+     }
+     #col-screen{
+        @include mycolor($White, $vd-desaturated-blue-s)
+        
+     }
+     
+     button{
+        box-shadow: 0 3px 0 $g-orange;
+        @include mycolor($vd-grayish-blue, $l-g-orange)
+         
+     
+     }
+     button:hover{
+         background-color: $White;
+     }
+     
+     .btn{
+        
+        background-color: $vd-desaturated-blue-tk ;
+      
+     }
+     #Del, #reset, #is-to{
+         
+         color: $White;
+     }
+     
+     #Del, #reset{
+         background-color:$d-dark-blue;
+         box-shadow: 0 3px 0 hsl(224, 28%, 35%);
+     }
+     #Del:hover,  #reset:hover{
+         background-color:#a2b3e1;
+     }
+     
+     
+     #is-to{
+        
+         background-color: hsl(6, 63%, 50%);
+         box-shadow: 0 3px 0 hsl(6, 70%, 34%);
+     }
+     #is-to:hover{
+         background-color:#f96c5b;
+     }
+     
+   
+}
+
+body#theme2 {
+         background-color: $l-gray;
+         color:  $Vd-g-yellow;    
+    
+     .themes{
+        .toggle{
+             background-color:$Grayish-red ;
+             div{
+            background-color:$Red;
+        }
+         }
+     }
+     #col-screen{
+      @include mycolor($Vd-g-yellow,  $Vl-gray);
+        
+     }
+     
+     button{
+        
+         box-shadow: 0 3px 0 $D-g-orange;
+         background-color: $l-g-yellow;
+         @include mycolor($Vd-g-yellow,  $l-g-yellow);}
+     button:hover{
+         background-color: $White;
+     }
+     
+     .btn{
+        
+        background-color: $Grayish-red ;
+      
+     }
+     #Del, #reset, #is-to{
+         
+         color: $White;
+     }
+     
+     #Del,#reset{
+            @include mycolor( $White, $DM-cyan);
+            box-shadow: 0 3px 0 $VD-cyan;
+     }
+     #Del:hover, #reset:hover{
+         background-color:#63b4bd;
+     }
+     #is-to{
+        @include mycolor( $White, $Orange);
+     box-shadow: 0 3px 0  $Dark-orange;
+     }
+     #is-to:hover{
+         background-color:#ff8b38;
+     }
+     
+   
+}
+
+body#theme3 {
+    background-color:  $vd-violet-m;
+    color:$l-yellow ;
+     
+   
+
+     .themes{
+        .toggle{
+             background-color:$vd-violet-tb ;
+             div{
+            background-color:$p-cyan ;
+            }
+         }
+     }
+     #col-screen, .btn{
+        @include mycolor($l-yellow , $vd-violet-tb);
+        
+     }
+     
+     button{
+        @include mycolor($l-yellow , $vd-violet-key);
+        box-shadow: 0 3px 0 $d-magenta;
+        
+        }
+     button:hover{
+         background-color: #6a34ab;
+     }
+     
+
+     #Del, #reset, #is-to{
+         color: $White;
+     }
+     
+     #Del,#reset{
+        
+            @include mycolor( $White, $d-violet);
+            box-shadow: 0 3px 0 $V-magenta;
+     }
+     #Del:hover, #reset:hover{
+         background-color:#8432b0;
+     }
+     #is-to{
+       
+        @include mycolor(  $vd-blue, $p-cyan);
+     box-shadow: 0 3px 0  $s-cyan;
+     }
+     #is-to:hover{
+         background-color:$s-cyan;
+     }
+     
+   
+}
+
+body{
+ transition: .6s ease;
+
+}
+
+.container{
+   width: 100vw;
+   height: 100vh;
+   @include myFlex(center,center );
+}
+
+.heading{
+    
+    @include myFlex(space-between,flex-end );
+    margin-bottom: 30px;
+    
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: -3px;
+}
+
+
+.themes{
+    width: 130px;
+    @include myFlex(space-between,flex-end );
+    font-size: .9rem;
+    transition:  0.5s ease;
+    font-weight: 700;
+  
+    .number-toggle{
+        margin: 0 5px;
+        width: 50px;
+            @include myFlex(space-between, center );
+            cursor: pointer;
+           
+        }
+    .toggle{
+        width: 60px;
+        @include myborder-ra();
+        cursor: pointer;
+        padding: 4px;
+        margin-top: 5px;
+        @include myFlex(space-between, center );
+         
+        #circle{
+        height: 15px;
+         width: 15px;
+         position: relative;
+         top: 0;
+         left: 0;
+         border-radius: 100%;
+         
+         }
+     
+         #circle2{
+            height: 15px;
+            width: 15px;
+            opacity: 0;
+            border-radius: 100%; }
+         #circle3{
+            height: 15px;
+            width: 15px;
+            opacity: 0;
+            border-radius: 100%;
+                 }
+      
+    }
+}
+#col-screen:focus{
+    border: none;
+    outline: none;
+}
+#col-screen{
+   word-break: break-all;
+   word-wrap: break-word;
+   width: 450px;
+   height: 100px;
+   padding-right: 20px;
+   font-weight: 700;
+   text-align: right;
+    border: none;
+   font-size: 3rem;
+   @include myborder-ra();
+   
+}
+
+button{
+   font-size: 32px;
+    outline: none;
+    font-weight: 700;
+    width: 80px;
+    height: 45px;
+    padding-top: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+
+.btn{
+    @include myFlex(space-between,center );
+   width: 450px;
+   flex-flow: wrap;
+    @include myborder-ra();
+   padding:10px;
+   margin-top: 20px;
+   cursor: pointer;
+}
+#Del, #reset, #is-to{
+    font-size: 20px;
+   
+}
+
+
+
+#reset,#is-to{
+    width: 190px;
+    
+}
+
+
+.attribution{
+    font-size: 16px;
+    text-align: center;
+    color: $l-g-orange;
+
+    a{
+      text-decoration: none;
+      color:$g-orange;
+    }
+}
+
+
+
+
+@media only screen and (max-width:475px) {
+    
+.title{
+    font-size: 1.6rem;
+}
+.themes{
+    font-size: .7rem;
+}
+  .heading{
+    width: 320px;
+  }
+   #col-screen{
+    width: 320px;
+   }
+   button{
+    font-size: 27px;
+     width: 60px;
+    height: 55px;
+     margin: 6px;
+    }
+
+    .btn{
+        width: 320px;
+    }
+
+    #Del, #reset, #is-to{
+        font-size: 16px;
+     }
+    
+   #reset,  #is-to{
+        width: 135px;
+       
+    }
+   
+    
+  
+}
+  

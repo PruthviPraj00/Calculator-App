@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body#theme1 {
+  background-color: hsl(222deg, 26%, 31%);
+  color: hsl(0deg, 0%, 100%);
+}
+body#theme1 .themes .toggle {
+  background-color: hsl(223deg, 31%, 20%);
+}
+body#theme1 .themes .toggle div {
+  background-color: hsl(6deg, 63%, 50%);
+}
+body#theme1 #col-screen {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(224deg, 36%, 15%);
+}
+body#theme1 button {
+  box-shadow: 0 3px 0 hsl(28deg, 16%, 65%);
+  color: hsl(221deg, 14%, 31%);
+  background-color: hsl(30deg, 25%, 89%);
+}
+body#theme1 button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+}
+body#theme1 .btn {
+  background-color: hsl(223deg, 31%, 20%);
+}
+body#theme1 #Del, body#theme1 #reset, body#theme1 #is-to {
+  color: hsl(0deg, 0%, 100%);
+}
+body#theme1 #Del, body#theme1 #reset {
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0 3px 0 hsl(224deg, 28%, 35%);
+}
+body#theme1 #Del:hover, body#theme1 #reset:hover {
+  background-color: #a2b3e1;
+}
+body#theme1 #is-to {
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0 3px 0 hsl(6deg, 70%, 34%);
+}
+body#theme1 #is-to:hover {
+  background-color: #f96c5b;
+}
+
+body#theme2 {
+  background-color: hsl(0deg, 0%, 90%);
+  color: hsl(60deg, 10%, 19%);
+}
+body#theme2 .themes .toggle {
+  background-color: hsl(0deg, 5%, 81%);
+}
+body#theme2 .themes .toggle div {
+  background-color: hsl(6deg, 63%, 50%);
+}
+body#theme2 #col-screen {
+  color: hsl(60deg, 10%, 19%);
+  background-color: hsl(0deg, 0%, 93%);
+}
+body#theme2 button {
+  box-shadow: 0 3px 0 hsl(35deg, 11%, 61%);
+  background-color: hsl(45deg, 7%, 89%);
+  color: hsl(60deg, 10%, 19%);
+  background-color: hsl(45deg, 7%, 89%);
+}
+body#theme2 button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+}
+body#theme2 .btn {
+  background-color: hsl(0deg, 5%, 81%);
+}
+body#theme2 #Del, body#theme2 #reset, body#theme2 #is-to {
+  color: hsl(0deg, 0%, 100%);
+}
+body#theme2 #Del, body#theme2 #reset {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(185deg, 42%, 37%);
+  box-shadow: 0 3px 0 hsl(185deg, 58%, 25%);
+}
+body#theme2 #Del:hover, body#theme2 #reset:hover {
+  background-color: #63b4bd;
+}
+body#theme2 #is-to {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(25deg, 98%, 40%);
+  box-shadow: 0 3px 0 hsl(25deg, 99%, 27%);
+}
+body#theme2 #is-to:hover {
+  background-color: #ff8b38;
+}
+
+body#theme3 {
+  background-color: hsl(268deg, 75%, 9%);
+  color: hsl(52deg, 100%, 62%);
+}
+body#theme3 .themes .toggle {
+  background-color: hsl(268deg, 71%, 12%);
+}
+body#theme3 .themes .toggle div {
+  background-color: hsl(176deg, 100%, 44%);
+}
+body#theme3 #col-screen, body#theme3 .btn {
+  color: hsl(52deg, 100%, 62%);
+  background-color: hsl(268deg, 71%, 12%);
+}
+body#theme3 button {
+  color: hsl(52deg, 100%, 62%);
+  background-color: hsl(268deg, 47%, 21%);
+  box-shadow: 0 3px 0 hsl(290deg, 70%, 36%);
+}
+body#theme3 button:hover {
+  background-color: #6a34ab;
+}
+body#theme3 #Del, body#theme3 #reset, body#theme3 #is-to {
+  color: hsl(0deg, 0%, 100%);
+}
+body#theme3 #Del, body#theme3 #reset {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(281deg, 89%, 26%);
+  box-shadow: 0 3px 0 hsl(285deg, 91%, 52%);
+}
+body#theme3 #Del:hover, body#theme3 #reset:hover {
+  background-color: #8432b0;
+}
+body#theme3 #is-to {
+  color: hsl(198deg, 20%, 13%);
+  background-color: hsl(176deg, 100%, 44%);
+  box-shadow: 0 3px 0 hsl(177deg, 92%, 70%);
+}
+body#theme3 #is-to:hover {
+  background-color: hsl(177deg, 92%, 70%);
+}
+
+body {
+  transition: 0.6s ease;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: -3px;
+}
+
+.themes {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  transition: 0.5s ease;
+  font-weight: 700;
+}
+.themes .number-toggle {
+  margin: 0 5px;
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.themes .toggle {
+  width: 60px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 4px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.themes .toggle #circle {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+}
+.themes .toggle #circle2 {
+  height: 15px;
+  width: 15px;
+  opacity: 0;
+  border-radius: 100%;
+}
+.themes .toggle #circle3 {
+  height: 15px;
+  width: 15px;
+  opacity: 0;
+  border-radius: 100%;
+}
+
+#col-screen:focus {
+  border: none;
+  outline: none;
+}
+
+#col-screen {
+  word-break: break-all;
+  word-wrap: break-word;
+  width: 450px;
+  height: 100px;
+  padding-right: 20px;
+  font-weight: 700;
+  text-align: right;
+  border: none;
+  font-size: 3rem;
+  border-radius: 12px;
+}
+
+button {
+  font-size: 32px;
+  outline: none;
+  font-weight: 700;
+  width: 80px;
+  height: 45px;
+  padding-top: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  flex-flow: wrap;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#Del, #reset, #is-to {
+  font-size: 20px;
+}
+
+#reset, #is-to {
+  width: 190px;
+}
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  color: hsl(30deg, 25%, 89%);
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(28deg, 16%, 65%);
+}
+
+@media only screen and (max-width: 475px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  .themes {
+    font-size: 0.7rem;
+  }
+  .heading {
+    width: 320px;
+  }
+  #col-screen {
+    width: 320px;
+  }
+  button {
+    font-size: 27px;
+    width: 60px;
+    height: 55px;
+    margin: 6px;
+  }
+  .btn {
+    width: 320px;
+  }
+  #Del, #reset, #is-to {
+    font-size: 16px;
+  }
+  #reset, #is-to {
+    width: 135px;
+  }
+}/*# sourceMappingURL=main-style.css.map */
